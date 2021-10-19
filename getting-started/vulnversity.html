@@ -193,26 +193,26 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="vulnversity">Vulnversity</h1>
-<p>Tasks:</p>
+<h3 id="tasks"><strong>Tasks</strong>:</h3>
 <ol>
-<li>Deploy the machine.</li>
-<li>Reconnaissance:<ol>
+<li><strong>Deploy the machine</strong>.</li>
+<li><strong>Reconnaissance</strong>:<ol>
 <li>Do nmap version scan , find port used by apache and also OS(Ubuntu)</li>
 <li>Answer all questions based on nmap output.</li>
 </ol>
 </li>
-<li>Locating directories using GoBuster:<ol>
+<li><strong>Locating directories using GoBuster</strong>:<ol>
 <li>Use gobuster to bruteforce directories using any directory word list, There will be /internal/ directory.</li>
 <li>/internal/ directory has file upload functionality.</li>
 </ol>
 </li>
-<li>Compromise the webserver:<ol>
+<li><strong>Compromise the webserver</strong>:<ol>
 <li>Try to upload php shell with various extensions such as .php,.php3,.php4,.php5,.phtml - only .phtml succeeds.</li>
 <li>Do one more directory search in /internal/ directory - You will find /internal/uploads/ directory which has uploaded shell in it.</li>
 <li>Connect to reverse shell by using nc in linux or ncat in windows - You have got local access to machine now . (you answer all the questions in the task now after cd to /home/ directory)</li>
 </ol>
 </li>
-<li>Privilege Escalation:<ol>
+<li><strong>Privilege Escalation</strong>:<ol>
 <li>Search for binaries with suid permission</li>
 <li>systemctl has suid permission</li>
 <li>make a service which copies /root/root.txt to /tmp/ or make a service which startes reverse  shell to attacker machine, make sure User is set as root for service.</li>
@@ -268,7 +268,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Vulnversity","level":"1.2.1","depth":2,"next":{"title":"Blue","level":"1.2.2","depth":2,"path":"getting-started/blue.md","ref":"getting-started/blue.md","articles":[]},"previous":{"title":"Getting Started","level":"1.2","depth":1,"path":"getting-started/README.md","ref":"getting-started/README.md","articles":[{"title":"Vulnversity","level":"1.2.1","depth":2,"path":"getting-started/vulnversity.md","ref":"getting-started/vulnversity.md","articles":[]},{"title":"Blue","level":"1.2.2","depth":2,"path":"getting-started/blue.md","ref":"getting-started/blue.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"getting-started/vulnversity.md","mtime":"2021-10-19T12:51:03.273Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-19T12:51:43.168Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Vulnversity","level":"1.2.1","depth":2,"next":{"title":"Blue","level":"1.2.2","depth":2,"path":"getting-started/blue.md","ref":"getting-started/blue.md","articles":[]},"previous":{"title":"Getting Started","level":"1.2","depth":1,"path":"getting-started/README.md","ref":"getting-started/README.md","articles":[{"title":"Vulnversity","level":"1.2.1","depth":2,"path":"getting-started/vulnversity.md","ref":"getting-started/vulnversity.md","articles":[]},{"title":"Blue","level":"1.2.2","depth":2,"path":"getting-started/blue.md","ref":"getting-started/blue.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"getting-started/vulnversity.md","mtime":"2021-10-19T12:52:17.285Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-19T12:52:57.383Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
