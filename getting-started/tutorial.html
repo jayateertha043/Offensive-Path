@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Vulnversity · GitBook</title>
+        <title>Tutorial · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="blue.html" />
     
-    
-    <link rel="prev" href="./" />
+    <link rel="prev" href="kenobi.html" />
     
 
     </head>
@@ -116,7 +114,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="vulnversity.html">
+        <li class="chapter " data-level="1.2.1" data-path="vulnversity.html">
             
                 <a href="vulnversity.html">
             
@@ -155,7 +153,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="tutorial.html">
+        <li class="chapter active" data-level="1.2.4" data-path="tutorial.html">
             
                 <a href="tutorial.html">
             
@@ -203,7 +201,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Vulnversity</a>
+        <a href=".." >Tutorial</a>
     </h1>
 </div>
 
@@ -218,38 +216,16 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="vulnversity">Vulnversity</h1>
+                                <h1 id="tutorial">Tutorial</h1>
 <h3 id="tasks"><strong>Tasks</strong>:</h3>
 <ol>
-<li><strong>Deploy the machine</strong>.</li>
-<li><strong>Reconnaissance</strong>:<ol>
-<li>Do nmap version scan , find port used by apache and also OS(Ubuntu)</li>
-<li>Answer all questions based on nmap output.</li>
+<li><strong>Starting your first machine:</strong><ol>
+<li>Start machine</li>
+<li>Try Attackbox</li>
+<li>Learn to use to connect to machine using VPN</li>
+<li>Complete task by submitting flag obtained by visiting machine ip in browser.</li>
 </ol>
 </li>
-<li><strong>Locating directories using GoBuster</strong>:<ol>
-<li>Use gobuster to bruteforce directories using any directory word list, There will be /internal/ directory.</li>
-<li>/internal/ directory has file upload functionality.</li>
-</ol>
-</li>
-<li><strong>Compromise the webserver</strong>:<ol>
-<li>Try to upload php shell with various extensions such as .php,.php3,.php4,.php5,.phtml - only .phtml succeeds.</li>
-<li>Do one more directory search in /internal/ directory - You will find /internal/uploads/ directory which has uploaded shell in it.</li>
-<li>Connect to reverse shell by using nc in linux or ncat in windows - You have got local access to machine now . (you answer all the questions in the task now after cd to /home/ directory)</li>
-</ol>
-</li>
-<li><strong>Privilege Escalation</strong>:<ol>
-<li>Search for binaries with suid permission</li>
-<li>systemctl has suid permission</li>
-<li>make a service which copies /root/root.txt to /tmp/ or make a service which startes reverse  shell to attacker machine, make sure User is set as root for service.</li>
-<li>Enable and start the service using systemctl - you are now root !!!</li>
-<li>Report root flag in /tmp/root.txt or /root/root.txt(reverse shell case).</li>
-</ol>
-</li>
-</ol>
-<p>References:</p>
-<ol>
-<li><a href="https://medium.com/@klockw3rk/privilege-escalation-leveraging-misconfigured-systemctl-permissions-bc62b0b28d49" target="_blank">https://medium.com/@klockw3rk/privilege-escalation-leveraging-misconfigured-systemctl-permissions-bc62b0b28d49</a></li>
 </ol>
 
                                 
@@ -278,14 +254,10 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Getting Started">
+                <a href="kenobi.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Kenobi">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="blue.html" class="navigation navigation-next " aria-label="Next page: Blue">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -294,7 +266,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Vulnversity","level":"1.2.1","depth":2,"next":{"title":"Blue","level":"1.2.2","depth":2,"path":"getting-started/blue.md","ref":"getting-started/blue.md","articles":[]},"previous":{"title":"Getting Started","level":"1.2","depth":1,"path":"getting-started/README.md","ref":"getting-started/README.md","articles":[{"title":"Vulnversity","level":"1.2.1","depth":2,"path":"getting-started/vulnversity.md","ref":"getting-started/vulnversity.md","articles":[]},{"title":"Blue","level":"1.2.2","depth":2,"path":"getting-started/blue.md","ref":"getting-started/blue.md","articles":[]},{"title":"Kenobi","level":"1.2.3","depth":2,"path":"getting-started/kenobi.md","ref":"getting-started/kenobi.md","articles":[]},{"title":"Tutorial","level":"1.2.4","depth":2,"path":"getting-started/tutorial.md","ref":"getting-started/tutorial.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"getting-started/vulnversity.md","mtime":"2021-10-20T12:14:40.586Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-20T12:15:15.110Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Tutorial","level":"1.2.4","depth":2,"previous":{"title":"Kenobi","level":"1.2.3","depth":2,"path":"getting-started/kenobi.md","ref":"getting-started/kenobi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"getting-started/tutorial.md","mtime":"2021-10-20T12:14:40.586Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-20T12:15:15.110Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
