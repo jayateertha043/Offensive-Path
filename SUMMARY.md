@@ -5,3 +5,4 @@
   * [Vulnversity](getting-started/vulnversity.md)
   * [Blue](getting-started/blue.md)
   * [Kenobi](getting-started/kenobi.md)
+  * [Tutorial](getting-started/tutorial.md)
