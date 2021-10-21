@@ -6,3 +6,5 @@
   * [Vulnversity](getting-started/vulnversity.md)
   * [Blue](getting-started/blue.md)
   * [Kenobi](getting-started/kenobi.md)
+* [Advanced Exploitation](advanced-exploitation/README.md)
+  * [Daily Bugle](advanced-exploitation/daily-bugle.md)
