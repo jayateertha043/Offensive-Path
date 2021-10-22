@@ -8,3 +8,4 @@
   * [Kenobi](getting-started/kenobi.md)
 * [Advanced Exploitation](advanced-exploitation/README.md)
   * [Daily Bugle](advanced-exploitation/daily-bugle.md)
+  * [Overpass 2 - Hacked](advanced-exploitation/overpass-2-hacked.md)
