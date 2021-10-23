@@ -7,5 +7,7 @@
   * [Blue](getting-started/blue.md)
   * [Kenobi](getting-started/kenobi.md)
 * [Advanced Exploitation](advanced-exploitation/README.md)
+  * [Steel Mountain](advanced-exploitation/steel-mountain.md)
   * [Daily Bugle](advanced-exploitation/daily-bugle.md)
   * [Overpass 2 - Hacked](advanced-exploitation/overpass-2-hacked.md)
+  * [Relevant](advanced-exploitation/relevant.md)
