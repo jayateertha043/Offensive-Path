@@ -11,3 +11,4 @@
   * [Daily Bugle](advanced-exploitation/daily-bugle.md)
   * [Overpass 2 - Hacked](advanced-exploitation/overpass-2-hacked.md)
   * [Relevant](advanced-exploitation/relevant.md)
+  * [Alfred](advanced-exploitation/alfred.md)
