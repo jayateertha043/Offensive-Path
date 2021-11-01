@@ -18,3 +18,7 @@
    5. `Get-ADUser -identity SQLService -properties "PasswordLastSet"` - 5/13/2020 8:26:58 PM
 9. **Conclusion**:
    1. Just Click Submit
+
+**References**:
+
+1. [PowerView Cheatsheet](https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993)
