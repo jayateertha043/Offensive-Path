@@ -10,6 +10,7 @@
   * [Steel Mountain](advanced-exploitation/steel-mountain.md)
   * [Alfred](advanced-exploitation/alfred.md)
   * [HackPark](advanced-exploitation/hackpark.md)
+  * [Game Zone](advanced-exploitation/game-zone.md)
   * [Daily Bugle](advanced-exploitation/daily-bugle.md)
   * [Overpass 2 - Hacked](advanced-exploitation/overpass-2-hacked.md)
   * [Relevant](advanced-exploitation/relevant.md)
