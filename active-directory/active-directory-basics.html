@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Vulnversity · GitBook</title>
+        <title>Active Directory Basics · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="blue.html" />
     
-    
-    <link rel="prev" href="tutorial.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -102,9 +100,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../getting-started/">
             
-                <a href="./">
+                <a href="../getting-started/">
             
                     
                     Getting Started
@@ -116,9 +114,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="tutorial.html">
+        <li class="chapter " data-level="1.2.1" data-path="../getting-started/tutorial.html">
             
-                <a href="tutorial.html">
+                <a href="../getting-started/tutorial.html">
             
                     
                     Tutorial
@@ -129,9 +127,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2" data-path="vulnversity.html">
+        <li class="chapter " data-level="1.2.2" data-path="../getting-started/vulnversity.html">
             
-                <a href="vulnversity.html">
+                <a href="../getting-started/vulnversity.html">
             
                     
                     Vulnversity
@@ -142,9 +140,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="blue.html">
+        <li class="chapter " data-level="1.2.3" data-path="../getting-started/blue.html">
             
-                <a href="blue.html">
+                <a href="../getting-started/blue.html">
             
                     
                     Blue
@@ -155,9 +153,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="kenobi.html">
+        <li class="chapter " data-level="1.2.4" data-path="../getting-started/kenobi.html">
             
-                <a href="kenobi.html">
+                <a href="../getting-started/kenobi.html">
             
                     
                     Kenobi
@@ -283,9 +281,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../active-directory/">
+        <li class="chapter " data-level="1.4" data-path="./">
             
-                <a href="../active-directory/">
+                <a href="./">
             
                     
                     Active Directory
@@ -297,9 +295,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../active-directory/active-directory-basics.html">
+        <li class="chapter active" data-level="1.4.1" data-path="active-directory-basics.html">
             
-                <a href="../active-directory/active-directory-basics.html">
+                <a href="active-directory-basics.html">
             
                     
                     Active Directory Basics
@@ -345,7 +343,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Vulnversity</a>
+        <a href=".." >Active Directory Basics</a>
     </h1>
 </div>
 
@@ -360,38 +358,31 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="vulnversity">Vulnversity</h1>
-<h3 id="tasks"><strong>Tasks</strong>:</h3>
+                                <h1 id="active-directory-basics">Active Directory Basics</h1>
+<h3 id="tasks"><strong>Tasks:</strong></h3>
 <ol>
-<li><strong>Deploy the machine</strong>.</li>
-<li><strong>Reconnaissance</strong>:<ol>
-<li>Do nmap version scan , find port used by apache and also OS(Ubuntu)</li>
-<li>Answer all questions based on nmap output.</li>
+<li><strong>Introduction</strong>:</li>
+<li><strong>Physical Active Directory</strong>:</li>
+<li><strong>The Forest</strong>:</li>
+<li><strong>Users + Groups</strong>:</li>
+<li><strong>Trusts + Policies</strong>:</li>
+<li><strong>Active Directory Domain Services + Authentication</strong>:</li>
+<li><strong>AD in the Cloud</strong>:<ol>
+<li>Answer after reading and understanding basics about AD. [For Task 1-7]</li>
 </ol>
 </li>
-<li><strong>Locating directories using GoBuster</strong>:<ol>
-<li>Use gobuster to bruteforce directories using any directory word list, There will be /internal/ directory.</li>
-<li>/internal/ directory has file upload functionality.</li>
+<li><strong>Hands-On Lab</strong>:<ol>
+<li><code>cd Downloads</code>, <code>powershell -ep bypass</code>, <code>. .\PowerView.ps1</code></li>
+<li><code>Get-NetComputer -fulldata | select operatingsystem</code> - Windows 10 Enterprise Evaluation</li>
+<li><code>Get-NetUser | select cn</code> - Admin2</li>
+<li><code>net localgroup</code> - Hyper-V Administrators</li>
+<li><code>Get-ADUser -identity SQLService -properties &quot;PasswordLastSet&quot;</code> - 5/13/2020 8:26:58 PM</li>
 </ol>
 </li>
-<li><strong>Compromise the webserver</strong>:<ol>
-<li>Try to upload php shell with various extensions such as .php,.php3,.php4,.php5,.phtml - only .phtml succeeds.</li>
-<li>Do one more directory search in /internal/ directory - You will find /internal/uploads/ directory which has uploaded shell in it.</li>
-<li>Connect to reverse shell by using nc in linux or ncat in windows - You have got local access to machine now . (you answer all the questions in the task now after cd to /home/ directory)</li>
+<li><strong>Conclusion</strong>:<ol>
+<li>Just Click Submit</li>
 </ol>
 </li>
-<li><strong>Privilege Escalation</strong>:<ol>
-<li>Search for binaries with suid permission</li>
-<li>systemctl has suid permission</li>
-<li>make a service which copies /root/root.txt to /tmp/ or make a service which startes reverse  shell to attacker machine, make sure User is set as root for service.</li>
-<li>Enable and start the service using systemctl - you are now root !!!</li>
-<li>Report root flag in /tmp/root.txt or /root/root.txt(reverse shell case).</li>
-</ol>
-</li>
-</ol>
-<p>References:</p>
-<ol>
-<li><a href="https://medium.com/@klockw3rk/privilege-escalation-leveraging-misconfigured-systemctl-permissions-bc62b0b28d49" target="_blank">https://medium.com/@klockw3rk/privilege-escalation-leveraging-misconfigured-systemctl-permissions-bc62b0b28d49</a></li>
 </ol>
 
                                 
@@ -420,14 +411,10 @@
 
             
                 
-                <a href="tutorial.html" class="navigation navigation-prev " aria-label="Previous page: Tutorial">
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Active Directory">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="blue.html" class="navigation navigation-next " aria-label="Next page: Blue">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -436,7 +423,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Vulnversity","level":"1.2.2","depth":2,"next":{"title":"Blue","level":"1.2.3","depth":2,"path":"getting-started/blue.md","ref":"getting-started/blue.md","articles":[]},"previous":{"title":"Tutorial","level":"1.2.1","depth":2,"path":"getting-started/tutorial.md","ref":"getting-started/tutorial.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"getting-started/vulnversity.md","mtime":"2021-11-01T13:22:54.199Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-01T13:23:26.621Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Active Directory Basics","level":"1.4.1","depth":2,"previous":{"title":"Active Directory","level":"1.4","depth":1,"path":"active-directory/README.md","ref":"active-directory/README.md","articles":[{"title":"Active Directory Basics","level":"1.4.1","depth":2,"path":"active-directory/active-directory-basics.md","ref":"active-directory/active-directory-basics.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"active-directory/active-directory-basics.md","mtime":"2021-11-01T13:22:54.199Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-01T13:23:26.621Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
