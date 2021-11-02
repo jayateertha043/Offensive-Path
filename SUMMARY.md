@@ -15,5 +15,6 @@
   * [Skynet](advanced-exploitation/skynet.md)
   * [Overpass 2 - Hacked](advanced-exploitation/overpass-2-hacked.md)
   * [Relevant](advanced-exploitation/relevant.md)
+  * [Internal](advanced-exploitation/internal.md)
 * [Active Directory](active-directory/README.md)
   * [Active Directory Basics](active-directory/active-directory-basics.md)
