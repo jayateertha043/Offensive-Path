@@ -18,3 +18,5 @@
   * [Internal](advanced-exploitation/internal.md)
 * [Active Directory](active-directory/README.md)
   * [Active Directory Basics](active-directory/active-directory-basics.md)
+* [Binary Overflow Exploitation](binary-overflow-exploitation/README.md)
+  * [Brainstorm](binary-overflow-exploitation/brainstorm.md)
