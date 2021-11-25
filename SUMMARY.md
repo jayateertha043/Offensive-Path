@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Pentest Path - TryHackMe](README.md)
+* [Offensive Path - TryHackMe](README.md)
 * [Getting Started](getting-started/README.md)
   * [Tutorial](getting-started/tutorial.md)
   * [Vulnversity](getting-started/vulnversity.md)
@@ -19,4 +19,5 @@
 * [Active Directory](active-directory/README.md)
   * [Active Directory Basics](active-directory/active-directory-basics.md)
 * [Binary Overflow Exploitation](binary-overflow-exploitation/README.md)
+  * [Buffer Overflow Prep](binary-overflow-exploitation/buffer-overflow-prep.md)
   * [Brainstorm](binary-overflow-exploitation/brainstorm.md)
