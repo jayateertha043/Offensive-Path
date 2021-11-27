@@ -21,3 +21,4 @@
 * [Binary Overflow Exploitation](binary-overflow-exploitation/README.md)
   * [Buffer Overflow Prep](binary-overflow-exploitation/buffer-overflow-prep.md)
   * [Brainstorm](binary-overflow-exploitation/brainstorm.md)
+  * [Gatekeeper](binary-overflow-exploitation/gatekeeper.md)
